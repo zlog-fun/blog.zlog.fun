@@ -17,13 +17,10 @@ jobs:
           # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
           fetch-depth: 0
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v2
+      - name: Use Node.js 20.x
+        uses: actions/setup-node@v1
         with:
-          # 选择要使用的 pnpm 版本
-          version: 8
-          # 使用 pnpm 安装依赖
-          run_install: true
+          node-version: "20.x"
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
